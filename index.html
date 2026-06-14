@@ -1,91 +1,313 @@
-<!DOCOMEN HTML>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title>---</title>
-</head>  
+    <meta charset="UTF-8">
+    <title>Шпаргалка - CSS + Git</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #FFF2DF;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2D3436;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+        h2 {
+            background: #F6D5A5;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin-top: 40px;
+            color: #2D3436;
+        }
+        h3 {
+            color: #333;
+            margin-top: 24px;
+            border-left: 4px solid #CCEDEE;
+            padding-left: 12px;
+        }
+        pre {
+            background: #2D3436;
+            color: #CCEDEE;
+            padding: 16px 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        code {
+            background: #2D3436;
+            color: #CCEDEE;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+        }
+        .comment {
+            color: #888;
+        }
+        .note {
+            background: #CCEDEE;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin: 16px 0;
+            border-left: 4px solid #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th {
+            background: #F6D5A5;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px 12px;
+            border-top: 1px solid #eee;
+        }
+        tr:hover {
+            background: #FFF2DF;
+        }
+    </style>
+</head>
 <body>
-    <p>* { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--c); font:16px Arial; }
+    <div class="container">
+        <h1>📚 Шпаргалка для экзамена</h1>
 
-/* ЭЛЕМЕНТЫ В РЯД */
-display: flex;
+        <!-- ============ CSS ============ -->
+        <h2>🎨 CSS — Шпаргалка</h2>
+
+        <h3>ЦВЕТА (переменные)</h3>
+        <pre><code>:root {
+    --c: #FFF2DF;   <span class="comment">/* кремовый — фон */</span>
+    --o: #F6D5A5;   <span class="comment">/* оранжевый — секции, футер */</span>
+    --m: #CCEDEE;   <span class="comment">/* мятный — карточки, кнопки */</span>
+    --g: #333;      <span class="comment">/* серый — текст */</span>
+    --w: #fff;      <span class="comment">/* белый */</span>
+    --r: 12px;      <span class="comment">/* радиус скругления */</span>
+}</code></pre>
+
+        <h3>БАЗА (сброс)</h3>
+        <pre><code>* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--c); font: 16px Arial; }</code></pre>
+
+        <h3>ЭЛЕМЕНТЫ В РЯД (Flexbox)</h3>
+        <pre><code>display: flex;
 gap: 24px;
-justify-content: space-between; /* по краям */
-justify-content: center;        /* по центру */
-align-items: center;            /* вертикально по центру */
-flex-direction: column;         /* в столбик */
+justify-content: space-between;   <span class="comment">/* по краям */</span>
+justify-content: center;          <span class="comment">/* по центру */</span>
+align-items: center;              <span class="comment">/* вертикально по центру */</span>
+flex-direction: column;           <span class="comment">/* в столбик */</span></code></pre>
 
-/* ПО ЦЕНТРУ */
-margin: 0 auto;          /* блок по центру */
-text-align: center;      /* текст по центру */
+        <h3>ПО ЦЕНТРУ</h3>
+        <pre><code>margin: 0 auto;          <span class="comment">/* блок по центру */</span>
+text-align: center;      <span class="comment">/* текст по центру */</span></code></pre>
 
-/* КАРТИНКА НА ВЕСЬ БЛОК */
-width: 100%;
+        <h3>КАРТИНКА НА ВЕСЬ БЛОК</h3>
+        <pre><code>width: 100%;
 height: 100%;
-object-fit: cover;
+object-fit: cover;</code></pre>
 
-/* СКРУГЛЕНИЕ */
-border-radius: var(--r);
+        <h3>СКРУГЛЕНИЕ УГЛОВ</h3>
+        <pre><code>border-radius: var(--r);</code></pre>
 
-/* ПОЗИЦИОНИРОВАНИЕ */
-position: relative;  /* родитель */
-position: absolute;  /* дочерний */
+        <h3>ПОЗИЦИОНИРОВАНИЕ</h3>
+        <pre><code>position: relative;   <span class="comment">/* родитель */</span>
+position: absolute;   <span class="comment">/* дочерний */</span>
 top: 0; left: 0;
-z-index: 999;
+z-index: 999;</code></pre>
 
-/* ШАПКА */
-.header { position:relative; height:400px; }
-.header img { width:100%; height:100%; object-fit:cover; }
-.nav-bar { position:absolute; top:0; width:100%; 
-           display:flex; justify-content:space-between; 
-           align-items:center; padding:20px 40px; }
+        <h3>ШАПКА</h3>
+        <pre><code>.header { position: relative; height: 400px; }
+.header img { width: 100%; height: 100%; object-fit: cover; }
 
-/* HERO */
-.hero { min-height:80vh; display:flex; flex-direction:column;
-        align-items:center; justify-content:center; 
-        text-align:center; max-width:600px; margin:0 auto; }
+.nav-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}</code></pre>
 
-/* КАРТОЧКИ */
-.cards-box { display:flex; gap:24px; max-width:1200px; margin:0 auto; }
-.card-item { flex:1; background:var(--m); border-radius:var(--r); padding:24px; }
+        <h3>HERO (главный экран)</h3>
+        <pre><code>.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}</code></pre>
 
-/* ОТЗЫВЫ */
-.reviews { background:var(--o); border-radius:var(--r); 
-           max-width:1200px; margin:0 auto; padding:40px 60px; position:relative; }
-.arrow { position:absolute; top:50%; transform:translateY(-50%); }
-.arrow-left { left:10px; }
-.arrow-right { right:10px; }
+        <h3>КАРТОЧКИ</h3>
+        <pre><code>.cards-box {
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-/* ФУТЕР */
-.footer { background:var(--o); max-width:1200px; margin:0 auto; padding:40px 20px 20px; }
-.footer-content { display:flex; justify-content:space-between; }
+.card-item {
+    flex: 1;
+    background: var(--m);
+    border-radius: var(--r);
+    padding: 24px;
+}</code></pre>
 
-/* ФОРМЫ */
-.custom-input { background:var(--c); border:none; border-radius:var(--r); padding:14px 16px; }
-body.test-page { background:#d1c5c5; min-height:100vh; display:flex; align-items:center; justify-content:center; }
-.form-container { background:#f5e6d3; max-width:500px; width:100%; }
+        <h3>ОТЗЫВЫ</h3>
+        <pre><code>.reviews {
+    background: var(--o);
+    border-radius: var(--r);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    position: relative;
+}
 
-/* КНОПКИ */
-.btn-main { background:var(--m); border:none; border-radius:var(--r); padding:16px 36px; font:bold 1.1rem Arial; cursor:pointer; }
-.btn-custom { background:#fff8f0; border:none; border-radius:var(--r); padding:16px 36px; width:100%; cursor:pointer; }</p>
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-<br>
-<p>Первый раз
-git init
+.arrow-left { left: 10px; }
+.arrow-right { right: 10px; }</code></pre>
+
+        <h3>ФУТЕР</h3>
+        <pre><code>.footer {
+    background: var(--o);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+
+        <h3>ФОРМЫ</h3>
+        <pre><code>.custom-input {
+    background: var(--c);
+    border: none;
+    border-radius: var(--r);
+    padding: 14px 16px;
+}
+
+body.test-page {
+    background: #d1c5c5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background: #f5e6d3;
+    max-width: 500px;
+    width: 100%;
+}</code></pre>
+
+        <h3>КНОПКИ</h3>
+        <pre><code>.btn-main {
+    background: var(--m);
+    border: none;
+    border-radius: var(--r);
+    padding: 16px 36px;
+    font: bold 1.1rem Arial;
+    cursor: pointer;
+}
+
+.btn-custom {
+    background: #fff8f0;
+    border: none;
+    border-radius: var(--r);
+    padding: 16px 36px;
+    width: 100%;
+    cursor: pointer;
+}</code></pre>
+
+        <!-- ============ GIT ============ -->
+        <h2>🔧 Git — Команды</h2>
+
+        <h3>🟢 Первый раз (создание репозитория)</h3>
+        <pre><code>git init
 git add .
 git commit -m "Все файлы проекта"
 git remote add origin https://github.com/логин/репо.git
-git push -u origin master</p>
+git push -u origin master</code></pre>
 
-<p>После изменений
-git add .
+        <h3>🟡 После изменений</h3>
+        <pre><code>git add .
 git commit -m "Изменил CSS"
+git push</code></pre>
+
+        <h3>🔵 Полезные команды</h3>
+        <table>
+            <tr>
+                <th>Команда</th>
+                <th>Что делает</th>
+            </tr>
+            <tr>
+                <td><code>git status</code></td>
+                <td>Что изменено</td>
+            </tr>
+            <tr>
+                <td><code>git log</code></td>
+                <td>История коммитов</td>
+            </tr>
+            <tr>
+                <td><code>git pull</code></td>
+                <td>Скачать изменения</td>
+            </tr>
+            <tr>
+                <td><code>git clone URL</code></td>
+                <td>Скачать репозиторий</td>
+            </tr>
+        </table>
+
+        <h3>📦 Коммиты по модулям (для экзамена)</h3>
+        <pre><code><span class="comment"># После Модуля 1</span>
+git add .
+git commit -m "Module 1: Диаграммы"
 git push
-<br>
-Полезные
-git status          — что изменено
-git log             — история коммитов
-git pull            — скачать изменения
-git clone URL       — скачать репозиторий</p>
+
+<span class="comment"># После Модуля 2</span>
+git add .
+git commit -m "Module 2: Figma"
+git push
+
+<span class="comment"># После Модуля 3</span>
+git add .
+git commit -m "Module 3: Сайт"
+git push
+
+<span class="comment"># После Модуля 4</span>
+git add .
+git commit -m "Module 4: Форма + БД"
+git push</code></pre>
+
+        <div class="note">
+            💡 <strong>Совет:</strong> Делай коммиты после каждого модуля — эксперт увидит историю работы и даст 5 баллов!
+        </div>
+
+    </div>
 </body>
 </html>
