@@ -1,0 +1,91 @@
+<!DOCOMEN HTML>
+<html>
+<head>
+    <title>---</title>
+</head>  
+<body>
+    <p>* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--c); font:16px Arial; }
+
+/* ЭЛЕМЕНТЫ В РЯД */
+display: flex;
+gap: 24px;
+justify-content: space-between; /* по краям */
+justify-content: center;        /* по центру */
+align-items: center;            /* вертикально по центру */
+flex-direction: column;         /* в столбик */
+
+/* ПО ЦЕНТРУ */
+margin: 0 auto;          /* блок по центру */
+text-align: center;      /* текст по центру */
+
+/* КАРТИНКА НА ВЕСЬ БЛОК */
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+/* СКРУГЛЕНИЕ */
+border-radius: var(--r);
+
+/* ПОЗИЦИОНИРОВАНИЕ */
+position: relative;  /* родитель */
+position: absolute;  /* дочерний */
+top: 0; left: 0;
+z-index: 999;
+
+/* ШАПКА */
+.header { position:relative; height:400px; }
+.header img { width:100%; height:100%; object-fit:cover; }
+.nav-bar { position:absolute; top:0; width:100%; 
+           display:flex; justify-content:space-between; 
+           align-items:center; padding:20px 40px; }
+
+/* HERO */
+.hero { min-height:80vh; display:flex; flex-direction:column;
+        align-items:center; justify-content:center; 
+        text-align:center; max-width:600px; margin:0 auto; }
+
+/* КАРТОЧКИ */
+.cards-box { display:flex; gap:24px; max-width:1200px; margin:0 auto; }
+.card-item { flex:1; background:var(--m); border-radius:var(--r); padding:24px; }
+
+/* ОТЗЫВЫ */
+.reviews { background:var(--o); border-radius:var(--r); 
+           max-width:1200px; margin:0 auto; padding:40px 60px; position:relative; }
+.arrow { position:absolute; top:50%; transform:translateY(-50%); }
+.arrow-left { left:10px; }
+.arrow-right { right:10px; }
+
+/* ФУТЕР */
+.footer { background:var(--o); max-width:1200px; margin:0 auto; padding:40px 20px 20px; }
+.footer-content { display:flex; justify-content:space-between; }
+
+/* ФОРМЫ */
+.custom-input { background:var(--c); border:none; border-radius:var(--r); padding:14px 16px; }
+body.test-page { background:#d1c5c5; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+.form-container { background:#f5e6d3; max-width:500px; width:100%; }
+
+/* КНОПКИ */
+.btn-main { background:var(--m); border:none; border-radius:var(--r); padding:16px 36px; font:bold 1.1rem Arial; cursor:pointer; }
+.btn-custom { background:#fff8f0; border:none; border-radius:var(--r); padding:16px 36px; width:100%; cursor:pointer; }</p>
+
+<br>
+<p>Первый раз
+git init
+git add .
+git commit -m "Все файлы проекта"
+git remote add origin https://github.com/логин/репо.git
+git push -u origin master</p>
+
+<p>После изменений
+git add .
+git commit -m "Изменил CSS"
+git push
+<br>
+Полезные
+git status          — что изменено
+git log             — история коммитов
+git pull            — скачать изменения
+git clone URL       — скачать репозиторий</p>
+</body>
+</html>
