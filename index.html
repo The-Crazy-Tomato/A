@@ -91,13 +91,31 @@
         <h2>🎨 CSS — Шпаргалка</h2>
 
         <h3>ЦВЕТА (переменные)</h3>
-        <pre><code>:root {
-    --c: #FFF2DF;   <span class="comment">/* кремовый — фон */</span>
-    --o: #F6D5A5;   <span class="comment">/* оранжевый — секции, футер */</span>
-    --m: #CCEDEE;   <span class="comment">/* мятный — карточки, кнопки */</span>
-    --g: #333;      <span class="comment">/* серый — текст */</span>
-    --w: #fff;      <span class="comment">/* белый */</span>
-    --r: 12px;      <span class="comment">/* радиус скругления */</span>
+        <pre><code>    <section class="py-5">
+        <h4 class="section-title">Ваши комментарии</h4>
+            <div id="reviewsCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="review">
+                            <strong>Анна</strong>
+                            <p>ОтзывзывОтзыв...</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="review">
+                            <strong>Ваня</strong>
+                            <p>Отзыв.зывОтзывО..</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+    </section>
 }</code></pre>
 
         <h3>БАЗА (сброс)</h3>
