@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Шпаргалка ДЭ 09.02.09</title>
+    <title>Bootstrap</title>
     <style>
         body { font-family: Arial; background: #FFF2DF; padding: 20px; color: #333; }
         h1 { text-align: center; color: #2D3436; }
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-<h1>📚 Шпаргалка для ДЭ 09.02.09</h1>
+<h1>📚</h1>
 
 <!-- ============================================ -->
-<h2>📄 1. HTML: КАРТОЧКИ ПРЕИМУЩЕСТВ + ОТЗЫВЫ (index.html)</h2>
+<h2>📄 КАРТОЧКИ ПРЕИМУЩЕСТВ + ОТЗЫВЫ </h2>
 
 <h3>Карточки преимуществ (3 в ряд)</h3>
 <pre><code>&lt;section class="py-5"&gt;
@@ -409,89 +409,6 @@ exit();
 );</code></pre>
 </div>
 
-<!-- ============================================ -->
-<h2>✅ 6. ЧЕК-ЛИСТ ПЕРЕД СДАЧЕЙ</h2>
-
-<div class="note">
-    <h3>🟢 Модуль 1 (Диаграммы) — 8 баллов</h3>
-    <ul>
-        <li>☐ Use Case: 2 актора (Клиент, Менеджер), 9 прецедентов</li>
-        <li>☐ Class Diagram: Client, Manager, Course, Group, Student, Certificate, Payment</li>
-    </ul>
-
-    <h3>🟢 Модуль 2 (Figma + Git) — 15 баллов</h3>
-    <ul>
-        <li>☐ 3 экрана в Figma (Главная, Курсы, Запись)</li>
-        <li>☐ <code>git init</code> → <code>git add .</code> → <code>git commit</code> → <code>git push</code></li>
-    </ul>
-
-    <h3>🟢 Модуль 3 (Верстка) — 25 баллов (БУ) / 50 баллов (ПУ)</h3>
-    <ul>
-        <li>☐ Все 3 страницы открываются и связаны ссылками</li>
-        <li>☐ Сайт похож на макет из Figma (цвета, отступы)</li>
-        <li>☐ Есть анимация (hover на кнопках)</li>
-        <li>☐ Адаптивность (не ломается при изменении размера окна)</li>
-    </ul>
-
-    <h3>🟢 Модуль 4 (БД) — 25 баллов (только ПУ)</h3>
-    <ul>
-        <li>☐ Таблица <code>user</code> создана в БД</li>
-        <li>☐ PHP-скрипт сохраняет данные без ошибок</li>
-        <li>☐ Валидация работает (красные поля при ошибке)</li>
-    </ul>
-</div>
-
-<!-- ============================================ -->
-<h2>⚠️ 7. ГЛАВНЫЕ ОШИБКИ</h2>
-
-<div class="note" style="background: #ffcccc;">
-    <ul>
-        <li>❌ Забыть <code>git push</code> в конце</li>
-        <li>❌ Неправильно написать <code>name=""</code> в HTML (должно точно совпадать с <code>$_POST['...']</code> в PHP)</li>
-        <li>❌ Забыть точку с запятой <code>;</code> в PHP</li>
-        <li>❌ Не подключить <code>bootstrap.bundle.min.js</code> (иначе слайдер не работает)</li>
-        <li>❌ Забыть <code>active</code> у первого <code>carousel-item</code></li>
-        <li>❌ Не закрыть теги <code>&lt;/div&gt;</code>, <code>&lt;/section&gt;</code></li>
-    </ul>
-</div>
-
-<!-- ============================================ -->
-<h2>🔧 8. GIT КОМАНДЫ</h2>
-
-<h3>Первый раз:</h3>
-<pre><code>git init
-git add .
-git commit -m "Все файлы проекта"
-git remote add origin URL_репозитория
-git push -u origin master</code></pre>
-
-<h3>После изменений:</h3>
-<pre><code>git add .
-git commit -m "Описание изменений"
-git push</code></pre>
-
-<h3>Коммиты по модулям (ОБЯЗАТЕЛЬНО!):</h3>
-<pre><code>git add .
-git commit -m "Module 1: Диаграммы"
-git push
-
-git add .
-git commit -m "Module 2: Figma"
-git push
-
-git add .
-git commit -m "Module 3: Сайт"
-git push
-
-git add .
-git commit -m "Module 4: Форма + БД"
-git push</code></pre>
-
-<h3>Полезные команды:</h3>
-<pre><code>git status          # что изменено
-git log             # история коммитов
-git pull            # скачать изменения
-git clone URL       # скачать репозиторий</code></pre>
 
 </body>
 </html>
