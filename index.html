@@ -2,184 +2,122 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Git</title>
+    <title>Шпаргалка ДЭ 09.02.09</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #FFF2DF;
-            margin: 0;
-            padding: 40px;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            color: #2D3436;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-        }
-        h2 {
-            background: #F6D5A5;
-            padding: 12px 20px;
-            border-radius: 12px;
-            margin-top: 40px;
-            color: #2D3436;
-        }
-        h3 {
-            color: #333;
-            margin-top: 24px;
-            border-left: 4px solid #CCEDEE;
-            padding-left: 12px;
-        }
-        pre {
-            background: #2D3436;
-            color: #CCEDEE;
-            padding: 16px 20px;
-            border-radius: 12px;
-            overflow-x: auto;
-            font-family: 'Consolas', 'Courier New', monospace;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        code {
-            background: #2D3436;
-            color: #CCEDEE;
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-family: 'Consolas', monospace;
-        }
-        .comment {
-            color: #888;
-        }
-        .note {
-            background: #CCEDEE;
-            padding: 12px 20px;
-            border-radius: 12px;
-            margin: 16px 0;
-            border-left: 4px solid #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        th {
-            background: #F6D5A5;
-            padding: 12px;
-            text-align: left;
-        }
-        td {
-            padding: 10px 12px;
-            border-top: 1px solid #eee;
-        }
-        tr:hover {
-            background: #FFF2DF;
-        }
+        body { font-family: Arial; background: #FFF2DF; padding: 20px; color: #333; }
+        h1 { text-align: center; color: #2D3436; }
+        h2 { background: #F6D5A5; padding: 12px 20px; border-radius: 12px; margin-top: 40px; }
+        h3 { border-left: 4px solid #CCEDEE; padding-left: 12px; margin-top: 24px; }
+        pre { background: #2D3436; color: #CCEDEE; padding: 16px 20px; border-radius: 12px; overflow-x: auto; font-family: Consolas, monospace; font-size: 14px; line-height: 1.6; }
+        code { background: #2D3436; color: #CCEDEE; padding: 2px 8px; border-radius: 6px; font-family: Consolas, monospace; }
+        .comment { color: #888; }
+        .note { background: #CCEDEE; padding: 12px 20px; border-radius: 12px; margin: 16px 0; border-left: 4px solid #333; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Css</h1>
 
-        <!-- ============ CSS ============ -->
-        <h2>ы</h2>
+<h1>📚 Шпаргалка для ДЭ 09.02.09</h1>
 
-        <h3>ЦВЕТА (переменные)</h3>
-        <pre><code>    <section class="py-5">
-        <h4 class="section-title">Ваши комментарии</h4>
-            <div id="reviewsCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="review">
-                            <strong>Анна</strong>
-                            <p>ОтзывзывОтзыв...</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="review">
-                            <strong>Ваня</strong>
-                            <p>Отзыв.зывОтзывО..</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-    </section>
-}</code></pre>
+<!-- ============================================ -->
+<h2>📄 1. HTML: КАРТОЧКИ ПРЕИМУЩЕСТВ + ОТЗЫВЫ (index.html)</h2>
 
-        <h3>БАЗА (сброс)</h3>
-        <pre><code>* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--c); font: 16px Arial; }</code></pre>
+<h3>Карточки преимуществ (3 в ряд)</h3>
+<pre><code>&lt;section class="py-5"&gt;
+    &lt;h4 class="section-title"&gt;Почему нас выбирают&lt;/h4&gt;
+    &lt;div class="cards-box"&gt;
+        &lt;article class="card-item"&gt;
+            &lt;p&gt;Текст преимущества 1&lt;/p&gt;
+            &lt;img src="photo2.png"&gt;
+        &lt;/article&gt;
+        &lt;article class="card-item"&gt;
+            &lt;p&gt;Текст преимущества 2&lt;/p&gt;
+            &lt;img src="photo2.png"&gt;
+        &lt;/article&gt;
+        &lt;article class="card-item"&gt;
+            &lt;p&gt;Текст преимущества 3&lt;/p&gt;
+            &lt;img src="photo2.png"&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
 
-        <h3>ЭЛЕМЕНТЫ В РЯД (Flexbox)</h3>
-        <pre><code>display: flex;
-gap: 24px;
-justify-content: space-between;   <span class="comment">/* по краям */</span>
-justify-content: center;          <span class="comment">/* по центру */</span>
-align-items: center;              <span class="comment">/* вертикально по центру */</span>
-flex-direction: column;           <span class="comment">/* в столбик */</span></code></pre>
+<h3>Слайдер отзывов (Bootstrap Carousel)</h3>
+<pre><code>&lt;section class="py-5"&gt;
+    &lt;h4 class="section-title"&gt;Ваши комментарии&lt;/h4&gt;
+    &lt;div class="reviews"&gt;
+        &lt;div id="reviewsCarousel" class="carousel slide"&gt;
+            &lt;div class="carousel-inner"&gt;
+                &lt;div class="carousel-item active"&gt;
+                    &lt;div class="review"&gt;
+                        &lt;strong&gt;Анна&lt;/strong&gt;
+                        &lt;p&gt;Отличный курс! Мне очень понравилось обучение.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                    &lt;div class="review"&gt;
+                        &lt;strong&gt;Ваня&lt;/strong&gt;
+                        &lt;p&gt;Хорошая школа, удобный график занятий.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                    &lt;div class="review"&gt;
+                        &lt;strong&gt;Даня&lt;/strong&gt;
+                        &lt;p&gt;Прошёл курс за 2 месяца. Спасибо преподавателям!&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button class="carousel-control-prev" type="button" 
+                    data-bs-target="#reviewsCarousel" data-bs-slide="prev"&gt;
+                &lt;span class="carousel-control-prev-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="carousel-control-next" type="button" 
+                    data-bs-target="#reviewsCarousel" data-bs-slide="next"&gt;
+                &lt;span class="carousel-control-next-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
 
-        <h3>ПО ЦЕНТРУ</h3>
-        <pre><code>margin: 0 auto;          <span class="comment">/* блок по центру */</span>
-text-align: center;      <span class="comment">/* текст по центру */</span></code></pre>
+<div class="note">
+    💡 <strong>Важно для Carousel:</strong>
+    <ul>
+        <li><code>id="reviewsCarousel"</code> — уникальный ID</li>
+        <li><code>class="carousel-item active"</code> — у ПЕРВОГО слайда обязательно!</li>
+        <li><code>data-bs-target="#reviewsCarousel"</code> — ссылка на ID</li>
+        <li>Подключить <code>bootstrap.bundle.min.js</code> перед <code>&lt;/body&gt;</code></li>
+    </ul>
+</div>
 
-        <h3>КАРТИНКА НА ВЕСЬ БЛОК</h3>
-        <pre><code>width: 100%;
-height: 100%;
-object-fit: cover;</code></pre>
+<!-- ============================================ -->
+<h2>🎨 2. CSS для карточек и отзывов</h2>
 
-        <h3>СКРУГЛЕНИЕ УГЛОВ</h3>
-        <pre><code>border-radius: var(--r);</code></pre>
+<pre><code>/* === ЦВЕТА === */
+:root {
+    --c: #FFF2DF;   /* кремовый — фон */
+    --o: #F6D5A5;   /* оранжевый — секции, футер */
+    --m: #CCEDEE;   /* мятный — карточки, кнопки */
+    --g: #333;      /* серый — текст */
+    --w: #fff;      /* белый */
+    --r: 12px;      /* радиус скругления */
+}
 
-        <h3>ПОЗИЦИОНИРОВАНИЕ</h3>
-        <pre><code>position: relative;   <span class="comment">/* родитель */</span>
-position: absolute;   <span class="comment">/* дочерний */</span>
-top: 0; left: 0;
-z-index: 999;</code></pre>
+/* === БАЗА === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--c); font: 16px Arial; color: var(--g); }
 
-        <h3>ШАПКА</h3>
-        <pre><code>.header { position: relative; height: 400px; }
-.header img { width: 100%; height: 100%; object-fit: cover; }
-
-.nav-bar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}</code></pre>
-
-        <h3>HERO (главный экран)</h3>
-        <pre><code>.hero {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* === ЗАГОЛОВКИ СЕКЦИЙ === */
+.section-title {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}</code></pre>
+    margin-bottom: 40px;
+    color: var(--g);
+}
 
-        <h3>КАРТОЧКИ</h3>
-        <pre><code>.cards-box {
+/* === КАРТОЧКИ ПРЕИМУЩЕСТВ (3 в ряд) === */
+.cards-box {
     display: flex;
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .card-item {
@@ -187,10 +125,20 @@ z-index: 999;</code></pre>
     background: var(--m);
     border-radius: var(--r);
     padding: 24px;
-}</code></pre>
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-        <h3>ОТЗЫВЫ</h3>
-        <pre><code>.reviews {
+.card-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--r);
+}
+
+/* === ОТЗЫВЫ (оранжевый блок) === */
+.reviews {
     background: var(--o);
     border-radius: var(--r);
     max-width: 1200px;
@@ -199,133 +147,351 @@ z-index: 999;</code></pre>
     position: relative;
 }
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.arrow-left { left: 10px; }
-.arrow-right { right: 10px; }</code></pre>
-
-        <h3>ФУТЕР</h3>
-        <pre><code>.footer {
-    background: var(--o);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
+.review {
+    background: var(--m);
+    border-radius: var(--r);
+    padding: 20px;
+    margin: 20px;
 }</code></pre>
 
-        <h3>ФОРМЫ</h3>
-        <pre><code>.custom-input {
-    background: var(--c);
-    border: none;
-    border-radius: var(--r);
-    padding: 14px 16px;
-}
+<!-- ============================================ -->
+<h2>📝 3. HTML формы записи (test.html)</h2>
 
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Запись на урок&lt;/title&gt;
+    &lt;link href="style.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body class="test-page"&gt;
+
+    &lt;div class="form-container"&gt;
+        &lt;h2 class="form-title"&gt;Запись на бесплатный урок&lt;/h2&gt;
+
+        &lt;form action="test.php" method="POST" id="signupForm"&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="name"&gt;ФИО&lt;/label&gt;
+                &lt;input type="text" id="name" name="name" 
+                       placeholder="Иванов Иван Иванович" required&gt;
+                &lt;span class="error" id="nameError"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for="napassworme"&gt;Телефон&lt;/label&gt;
+                &lt;input type="tel" id="napassworme" name="napassworme" 
+                       placeholder="+7(999)-123-45-67" required&gt;
+                &lt;span class="error" id="phoneError"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="email" id="email" name="email" 
+                       placeholder="example@mail.com" required&gt;
+                &lt;span class="error" id="emailError"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for="corse"&gt;Курс&lt;/label&gt;
+                &lt;select id="corse" name="corse" required&gt;
+                    &lt;option value=""&gt;Выберите курс&lt;/option&gt;
+                    &lt;option value="Индивидуальные уроки"&gt;Индивидуальные уроки&lt;/option&gt;
+                    &lt;option value="Англ для путешествий"&gt;Англ для путешествий&lt;/option&gt;
+                    &lt;option value="Курс Лёгкий старт"&gt;Курс "Лёгкий старт"&lt;/option&gt;
+                    &lt;option value="Разговорный клуб"&gt;Разговорный клуб&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;span class="error" id="corseError"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-check"&gt;
+                &lt;input type="checkbox" id="agreement" name="agreement" required&gt;
+                &lt;label for="agreement"&gt;Согласие на обработку персональных данных&lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;button type="submit" class="submit-btn"&gt;Записаться&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        // Валидация формы
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            let isValid = true;
+            document.querySelectorAll('.error').forEach(el =&gt; el.textContent = '');
+            document.querySelectorAll('input, select').forEach(el =&gt; el.classList.remove('invalid'));
+
+            const name = document.getElementById('name');
+            if (!/^[А-Яа-яЁё\s]+$/.test(name.value.trim())) {
+                document.getElementById('nameError').textContent = 'Только русские буквы';
+                name.classList.add('invalid');
+                isValid = false;
+            }
+
+            const phone = document.getElementById('napassworme');
+            if (!/^\+7\(\d{3}\)-\d{3}-\d{2}-\d{2}$/.test(phone.value.trim())) {
+                document.getElementById('phoneError').textContent = 'Формат: +7(XXX)-XXX-XX-XX';
+                phone.classList.add('invalid');
+                isValid = false;
+            }
+
+            const email = document.getElementById('email');
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+                document.getElementById('emailError').textContent = 'Неверный email';
+                email.classList.add('invalid');
+                isValid = false;
+            }
+
+            const corse = document.getElementById('corse');
+            if (corse.value === '') {
+                document.getElementById('corseError').textContent = 'Выберите курс';
+                corse.classList.add('invalid');
+                isValid = false;
+            }
+
+            if (!isValid) e.preventDefault();
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<!-- ============================================ -->
+<h2>🎨 4. CSS для формы записи</h2>
+
+<pre><code>/* === СТРАНИЦА ЗАПИСИ === */
 body.test-page {
-    background: #d1c5c5;
+    background: var(--c);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .form-container {
-    background: #f5e6d3;
+    background: var(--o);
     max-width: 500px;
     width: 100%;
-}</code></pre>
-
-        <h3>КНОПКИ</h3>
-        <pre><code>.btn-main {
-    background: var(--m);
-    border: none;
+    padding: 40px;
     border-radius: var(--r);
-    padding: 16px 36px;
-    font: bold 1.1rem Arial;
+}
+
+.form-title {
+    text-align: center;
+    font: bold 28px Arial;
+    color: var(--g);
+    margin-bottom: 30px;
+}
+
+.form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.form-container .form-group label {
+    display: block;
+    font: 600 16px Arial;
+    color: var(--g);
+    margin-bottom: 8px;
+}
+
+.form-container .form-group input,
+.form-container .form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--c);
+    border: 2px solid transparent;
+    border-radius: var(--r);
+    font: 16px Arial;
+    color: var(--g);
+    transition: border 0.3s;
+}
+
+.form-container .form-group input:focus,
+.form-container .form-group select:focus {
+    outline: none;
+    border-color: var(--m);
+}
+
+.form-container .form-group input.invalid,
+.form-container .form-group select.invalid {
+    border-color: #ff4444;
+    background: #ffe6e6;
+}
+
+.error {
+    display: block;
+    color: #ff4444;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-check input[type="checkbox"] {
+    margin-top: 3px;
     cursor: pointer;
 }
 
-.btn-custom {
-    background: #fff8f0;
+.form-check label {
+    font-size: 14px;
+    color: var(--g);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--m);
     border: none;
     border-radius: var(--r);
-    padding: 16px 36px;
-    width: 100%;
+    font: bold 18px Arial;
+    color: var(--g);
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b8e0e1;
+    transform: translateY(-2px);
 }</code></pre>
 
-        <!-- ============ GIT ============ -->
-        <h2>🔧 Git — Команды</h2>
+<!-- ============================================ -->
+<h2>🐘 5. PHP обработчик (test.php)</h2>
 
-        <h3>🟢 Первый раз (создание репозитория)</h3>
-        <pre><code>git init
+<pre><code>&lt;?php
+// 1. ПОДКЛЮЧЕНИЕ К БД
+$sql = mysqli_connect("localhost", "root", "root", "user");
+if (!$sql) { 
+    die('Ошибка подключения: ' . mysqli_connect_error()); 
+}
+
+// 2. ПОЛУЧЕНИЕ ДАННЫХ ИЗ ФОРМЫ
+// ВАЖНО: имена должны совпадать с name="" в HTML!
+$nameUser = $_POST['name'];
+$passwordUser = $_POST['napassworme'];  // это телефон
+$emailUser = $_POST['email'];
+$corseUser = $_POST['corse'];
+
+// 3. ПОДГОТОВКА SQL-ЗАПРОСА (защита от SQL-инъекций)
+$query = 'INSERT INTO user (name, password, email, corse) VALUES (?,?,?,?)';
+$stmt = mysqli_prepare($sql, $query);
+
+// 4. ПРИВЯЗКА ПАРАМЕТРОВ
+// s = string, i = integer, d = double, b = blob
+mysqli_stmt_bind_param($stmt, "ssss", $nameUser, $passwordUser, $emailUser, $corseUser);
+
+// 5. ВЫПОЛНЕНИЕ ЗАПРОСА
+$result = mysqli_stmt_execute($stmt);
+if (!$result) { 
+    print("Ошибка запроса"); 
+}
+
+// 6. ПЕРЕНАПРАВЛЕНИЕ НА ГЛАВНУЮ
+header('Location: test.html');
+exit();
+?&gt;</code></pre>
+
+<div class="note">
+    💡 <strong>SQL для создания таблицы:</strong>
+    <pre style="margin-top: 10px;"><code>CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    password VARCHAR(255),
+    email VARCHAR(255),
+    corse VARCHAR(255)
+);</code></pre>
+</div>
+
+<!-- ============================================ -->
+<h2>✅ 6. ЧЕК-ЛИСТ ПЕРЕД СДАЧЕЙ</h2>
+
+<div class="note">
+    <h3>🟢 Модуль 1 (Диаграммы) — 8 баллов</h3>
+    <ul>
+        <li>☐ Use Case: 2 актора (Клиент, Менеджер), 9 прецедентов</li>
+        <li>☐ Class Diagram: Client, Manager, Course, Group, Student, Certificate, Payment</li>
+    </ul>
+
+    <h3>🟢 Модуль 2 (Figma + Git) — 15 баллов</h3>
+    <ul>
+        <li>☐ 3 экрана в Figma (Главная, Курсы, Запись)</li>
+        <li>☐ <code>git init</code> → <code>git add .</code> → <code>git commit</code> → <code>git push</code></li>
+    </ul>
+
+    <h3>🟢 Модуль 3 (Верстка) — 25 баллов (БУ) / 50 баллов (ПУ)</h3>
+    <ul>
+        <li>☐ Все 3 страницы открываются и связаны ссылками</li>
+        <li>☐ Сайт похож на макет из Figma (цвета, отступы)</li>
+        <li>☐ Есть анимация (hover на кнопках)</li>
+        <li>☐ Адаптивность (не ломается при изменении размера окна)</li>
+    </ul>
+
+    <h3>🟢 Модуль 4 (БД) — 25 баллов (только ПУ)</h3>
+    <ul>
+        <li>☐ Таблица <code>user</code> создана в БД</li>
+        <li>☐ PHP-скрипт сохраняет данные без ошибок</li>
+        <li>☐ Валидация работает (красные поля при ошибке)</li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<h2>⚠️ 7. ГЛАВНЫЕ ОШИБКИ</h2>
+
+<div class="note" style="background: #ffcccc;">
+    <ul>
+        <li>❌ Забыть <code>git push</code> в конце</li>
+        <li>❌ Неправильно написать <code>name=""</code> в HTML (должно точно совпадать с <code>$_POST['...']</code> в PHP)</li>
+        <li>❌ Забыть точку с запятой <code>;</code> в PHP</li>
+        <li>❌ Не подключить <code>bootstrap.bundle.min.js</code> (иначе слайдер не работает)</li>
+        <li>❌ Забыть <code>active</code> у первого <code>carousel-item</code></li>
+        <li>❌ Не закрыть теги <code>&lt;/div&gt;</code>, <code>&lt;/section&gt;</code></li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<h2>🔧 8. GIT КОМАНДЫ</h2>
+
+<h3>Первый раз:</h3>
+<pre><code>git init
 git add .
 git commit -m "Все файлы проекта"
-git remote add origin https://github.com/логин/репо.git
+git remote add origin URL_репозитория
 git push -u origin master</code></pre>
 
-        <h3>🟡 После изменений</h3>
-        <pre><code>git add .
-git commit -m "Изменил CSS"
+<h3>После изменений:</h3>
+<pre><code>git add .
+git commit -m "Описание изменений"
 git push</code></pre>
 
-        <h3>🔵 Полезные команды</h3>
-        <table>
-            <tr>
-                <th>Команда</th>
-                <th>Что делает</th>
-            </tr>
-            <tr>
-                <td><code>git status</code></td>
-                <td>Что изменено</td>
-            </tr>
-            <tr>
-                <td><code>git log</code></td>
-                <td>История коммитов</td>
-            </tr>
-            <tr>
-                <td><code>git pull</code></td>
-                <td>Скачать изменения</td>
-            </tr>
-            <tr>
-                <td><code>git clone URL</code></td>
-                <td>Скачать репозиторий</td>
-            </tr>
-        </table>
-
-        <h3>📦 Коммиты по модулям (для экзамена)</h3>
-        <pre><code><span class="comment"># После Модуля 1</span>
-git add .
+<h3>Коммиты по модулям (ОБЯЗАТЕЛЬНО!):</h3>
+<pre><code>git add .
 git commit -m "Module 1: Диаграммы"
 git push
 
-<span class="comment"># После Модуля 2</span>
 git add .
 git commit -m "Module 2: Figma"
 git push
 
-<span class="comment"># После Модуля 3</span>
 git add .
 git commit -m "Module 3: Сайт"
 git push
 
-<span class="comment"># После Модуля 4</span>
 git add .
 git commit -m "Module 4: Форма + БД"
 git push</code></pre>
 
-        <div class="note">
-            💡 <strong>Совет:</strong> Делай коммиты после каждого модуля — эксперт увидит историю работы и даст 5 баллов!
-        </div>
+<h3>Полезные команды:</h3>
+<pre><code>git status          # что изменено
+git log             # история коммитов
+git pull            # скачать изменения
+git clone URL       # скачать репозиторий</code></pre>
 
-    </div>
 </body>
 </html>
